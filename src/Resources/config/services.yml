@@ -1,0 +1,25 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Symfony\Component\Filesystem\Filesystem:
+        class: Symfony\Component\Filesystem\Filesystem
+
+    XimplyCMS\FileSystem\Domain\Factory\FileFactory:
+        class: XimplyCMS\FileSystem\Domain\Factory\FileFactory
+        public: true
+
+    XimplyCMS\FileSystem\Domain\Factory\FolderFactory:
+        class: XimplyCMS\FileSystem\Domain\Factory\FolderFactory
+        public: true
+
+    XimplyCMS\FileSystem\Storage\LocalStorage\Adapter\FileHandlerAdapter:
+        class: XimplyCMS\FileSystem\Storage\LocalStorage\Adapter\FileHandlerAdapter
+        arguments:
+            - '@Symfony\Component\Filesystem\Filesystem'
+
+    XimplyCMS\FileSystem\Storage\LocalStorage\LocalStorageDriver:
+        class: XimplyCMS\FileSystem\Storage\LocalStorage\LocalStorageDriver
+        arguments:
+            - '@XimplyCMS\FileSystem\Storage\LocalStorage\Adapter\FileHandlerAdapter'

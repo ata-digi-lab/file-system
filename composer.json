@@ -1,0 +1,27 @@
+{
+    "name": "ata-digi-lab/file-system",
+    "description": "Ximply PSR file system package",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Andet Tafa",
+            "email": "tafa.andet@googlemail.com",
+            "homepage": "https://www.ximply-cms.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "XimplyCMS\\FileSystem\\": "src/"
+        }
+    },
+    "require": {
+        "php" : ">=8.1",
+        "ext-mbstring": "*",
+        "symfony/filesystem": "6.*"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    }
+}

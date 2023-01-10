@@ -1,7 +1,6 @@
 {
     "name": "ata-digi-lab/file-system",
     "description": "Ximply PSR file system package",
-    "version": "1.0.0",
     "authors": [
         {
             "name": "Andet Tafa",
